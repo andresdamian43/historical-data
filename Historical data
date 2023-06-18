@@ -17,3 +17,5 @@ stats.head()
 stats = stats.replace(r'', 0, regex=True) #replace the empty string
 stats['Year'] = year #create a new column as the year variable
 stats.head()
+stats.to_csv('{}playerstats.csv'.format(year)) #add your desired path to the function
+    print("Player data for the year {} has been created.".format(year))
