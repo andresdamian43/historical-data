@@ -1,7 +1,7 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import pandas as pd
-year = 2013, 2022
+year = 2022
 url = "https://www.pro-football-reference.com/years/{}/fantasy.htm".format(year) #string formatting to manipulate the url by a given year
 html = urlopen(url)
 soup = BeautifulSoup(html)
