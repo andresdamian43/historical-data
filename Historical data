@@ -16,3 +16,7 @@ stats = pd.DataFrame(player_stats, columns = headers)
 stats.head()
 stats = stats.replace(r'', 0, regex=True) #replace the empty string
 stats['Year'] = year #create a new column as the year variable
+# Export DataFrame to Excel
+file_name = "player_stats_{}.xlsx".format(year)
+stats.to_excel(file_name, index=False)
+print("Data exported to", file_name)
